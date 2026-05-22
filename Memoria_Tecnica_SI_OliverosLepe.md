@@ -44,6 +44,20 @@ Se selecciona AWS como proveedor principal por su **madurez**, su extensa docume
 
 <img width="1130" height="337" alt="PresupuestoCloud jpg" src="https://github.com/user-attachments/assets/0df1a818-e0fa-4098-b89c-87b10b4f7459" />
 
+## 2. Estimación de Costes de Infraestructura
+
+Para calcular el Coste Total de Propiedad (TCO) mensual de la aplicación, se ha diseñado un presupuesto multifrecuencia y multiproveedor que optimiza la inversión según las necesidades del proyecto, distribuyendo los servicios entre Google Cloud, AWS y DigitalOcean.
+
+### 📊 Desglose de la Estructura de la Hoja de Cálculo
+La tabla se ha confeccionado siguiendo directrices de diseño corporativo e incluye las siguientes automatizaciones mediante fórmulas dinámicas (evitando valores estáticos):
+
+1. **Segmentación por Categorías:** Se dividen claramente los costes esenciales solicitados: Cómputo (servidores), Almacenamiento (Base de Datos y discos para Backups) y Transferencia de red (tráfico saliente).
+2. **Cálculo de Totales Mensuales (Columna F):** Cada fila calcula de manera automática el coste multiplicando la cantidad de recursos solicitados por su precio unitario (`=Cantidad * Precio Unitario`).
+3. **Módulo de TCO y Gestión Comercial (Bloque I):**
+   * **Total SIN IVA (TCO Base):** Recoge el sumatorio total de todos los servicios de infraestructura del mes utilizando la fórmula `=SUMA(F2:F7)`.
+   * **Total CON IVA (21%):** Aplica el impuesto sobre el valor añadido regulado mediante fórmula directa sobre la base imponible.
+   * **Total con Beneficio Industrial (+25%):** Aplica un margen de beneficio del 25% solicitado sobre el coste total indexado, calculando de manera automatizada el precio final final de cara a la facturación del cliente.
+
 
 > **Nota sobre escalabilidad:** En caso de crecimiento del tráfico se puede migrar a EC2 `t3.large` (+30 €/mes) y RDS `db.t3.small` (+15 €/mes), activando además AWS Auto Scaling Group sin coste adicional de configuración. El diseño actual permite absorber hasta ~500 usuarios concurrentes.
 
