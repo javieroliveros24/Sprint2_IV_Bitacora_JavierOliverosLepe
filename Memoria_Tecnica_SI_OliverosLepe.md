@@ -42,22 +42,8 @@ Se selecciona AWS como proveedor principal por su **madurez**, su extensa docume
 
 ### 2.3 Tabla de costes mensuales estimados
 
-| Categoría              | Servicio / Proveedor                     | Uds. | Precio unit. (€) | Subtotal (€) |
-|------------------------|------------------------------------------|-----:|------------------:|-------------:|
-| 🖥️ Cómputo            | AWS EC2 t3.medium (VPS)                  |    1 |            30,00  |       30,00  |
-| 🖥️ Cómputo            | Docker Engine (incluido en EC2)          |    1 |             0,00  |        0,00  |
-| 🗄️ Almacenamiento     | AWS RDS PostgreSQL db.t3.micro           |    1 |            15,00  |       15,00  |
-| 🗄️ Almacenamiento     | AWS S3 — almacenamiento objetos (50 GB)  |   50 |             0,023 |        1,15  |
-| 🌐 Red                 | Transferencia saliente egress (100 GB)   |  100 |             0,09  |        9,00  |
-| 🌐 Red                 | IP Elástica (Elastic IP)                 |    1 |             3,60  |        3,60  |
-| 🔒 Seguridad           | AWS Certificate Manager (SSL/TLS)        |    1 |             0,00  |        0,00  |
-| 🔒 Seguridad           | AWS IAM + Security Groups                |    1 |             0,00  |        0,00  |
-| 📧 Mensajería          | Slack Plan Pro (2 usuarios)              |    2 |             7,25  |       14,50  |
-| 🔧 DevOps              | GitHub Actions CI/CD                     |    1 |             0,00  |        0,00  |
-| 🔧 DevOps              | Dominio .com (anualizado ÷ 12)           |    1 |             1,00  |        1,00  |
-| **SUBTOTAL (sin IVA)** |                                          |      |                   |  **74,25 €** |
-| **IVA 21%**            |                                          |      |                   |  **15,59 €** |
-| **TOTAL MENSUAL**      |                                          |      |                   |  **89,84 €** |
+<img width="1130" height="337" alt="PresupuestoCloud jpg" src="https://github.com/user-attachments/assets/0df1a818-e0fa-4098-b89c-87b10b4f7459" />
+
 
 > **Nota sobre escalabilidad:** En caso de crecimiento del tráfico se puede migrar a EC2 `t3.large` (+30 €/mes) y RDS `db.t3.small` (+15 €/mes), activando además AWS Auto Scaling Group sin coste adicional de configuración. El diseño actual permite absorber hasta ~500 usuarios concurrentes.
 
